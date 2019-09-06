@@ -45,7 +45,7 @@ struct Node* buildLinkedList(int* arr, int n){
     end = head;   //  未创建其余结点之前，只有一个头结点                //  结点个数
     for (int i = 0; i < n; i++) {
         node = (struct Node *)malloc(sizeof(struct Node *)); //  为新结点开辟新内
-        node->data = arr[i];                                  //  新结点的数据域赋值
+        node->data = *(arr + i);                                  //  新结点的数据域赋值
         end->link = node;
         end = node;
     }
